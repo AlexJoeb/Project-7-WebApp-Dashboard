@@ -1,0 +1,47 @@
+.header{
+    height: 70px;
+
+    padding: 0 15px;
+    
+    @include flex($dir: row, $wrap: wrap){
+        justify-content: center;
+        align-items:center;
+    }
+
+    &__title{
+        font-size: 1.4rem;
+        margin-right: auto;
+    }
+
+    &__profile{
+        @include flex($dir: row, $wrap: wrap){
+            justify-content: center;
+            align-items:center;
+        }
+        &--image{
+            width: 30px;
+            height: 30px;
+            
+            margin: 0 auto;
+
+            background:url("../../images/member-2.jpg") no-repeat center center;
+            background-size: cover;
+            
+            display: block;
+
+            border-radius: 50%;
+
+            margin: 0 15px;
+            
+        }
+    }
+
+    &__notification{
+        position: relative;
+        top: 3px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

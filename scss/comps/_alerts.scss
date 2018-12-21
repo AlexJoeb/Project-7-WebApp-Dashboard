@@ -1,0 +1,40 @@
+.alerts{
+    background: color(blue, x-dark);
+
+    padding: 15px;
+
+    &__item{
+        @include flex($dir: column, $wrap: nowrap){
+            justify-content: center;
+        }
+
+        margin-bottom: 15px;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        &--header{
+            width: 100%;
+            @include flex($wrap: nowrap){
+                justify-content: center;
+                align-items: center;
+            }
+            &--title, &--del{
+                display:inline-block;
+            }
+
+            &--title{
+                margin-right: auto;
+            }
+
+            &--del{
+                fill:color(white);
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

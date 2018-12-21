@@ -1,0 +1,29 @@
+@mixin mq($break){
+    @if map-has-key($break-points, $break){
+        &{
+            @media only screen and (min-width: map-get($break-points, $key: $break)){
+                @content;
+            }
+        }
+    }@else{
+        @warn "Can't find #{$break} in $break-points.";
+    }
+}
+
+@mixin flex($dir: row, $wrap: wrap){
+    &{
+        display: flex;
+        flex-direction: $dir;
+        flex-wrap: $wrap;
+        @content;
+    }
+}
+
+@mixin grid($temp: auto / auto, $areas: auto){
+    &{
+        display: grid;
+        grid-template: $temp;
+        grid-template-areas: $areas;
+        @content;
+    }
+}

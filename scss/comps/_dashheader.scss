@@ -1,0 +1,53 @@
+.dashheader {
+    background: color(gray, x-light);
+
+    height: auto;
+
+    padding: 15px 0;
+
+    @include flex ($dir: column, $wrap: nowrap) {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h2 {
+        color: color(black);
+        font-size: 1.5rem;
+    }
+
+    input {
+        width: 80%;
+
+        background: url("../../images/SVG/finderglass.svg") no-repeat, color(white, x-light);
+        background-size: 3% 50%;
+        background-position-y: center;
+        background-position-x: calc(100% - 15px);
+
+        margin: 15px 0;
+        padding: 10px 40px 10px 10px;
+
+        border: 0;
+        border: 1px solid color(white, x-dark);
+        border-radius: 5px;
+    }
+
+    #alert {
+        @include flex($dir: row, $wrap: nowrap) {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        width: 90%;
+        height: auto;
+
+        padding: 15px 20px;
+
+        border-radius: 10px;
+        .close_button {
+            align-self: flex-end;
+            
+            margin-left: 15px;
+        }
+    }
+
+}

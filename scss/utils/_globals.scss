@@ -1,0 +1,79 @@
+.mobile-hide {
+    display: none;
+
+    @include mq(tablet) {
+        display: inline;
+    }
+}
+
+.notification {
+    &:after {
+        content: "";
+        width: .4rem;
+        height: .4rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: red;
+    }
+}
+
+.warn {
+    background: color(red);
+    border-bottom: 3px solid color(red, x-dark);
+}
+
+.info {
+    background: color(blue);
+    border-bottom: 3px solid color(blue, x-dark);
+}
+
+.success {
+    background: color(green, dark);
+    border-bottom: 3px solid color(green, x-dark);
+}
+
+.close__button {
+    min-width: 10px;
+    height: auto;
+    fill: color(white);
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.shake {
+    animation: shake .7s ease-in-out 0s 1;
+}
+
+@keyframes shake {
+    20% {
+        transform: rotate(-30deg)
+    }
+
+    40% {
+        transform: rotate(30deg)
+    }
+
+    60% {
+        transform: rotate(-30deg)
+    }
+
+    80% {
+        transform: rotate(30deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+%clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}

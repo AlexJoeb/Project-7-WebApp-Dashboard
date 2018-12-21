@@ -1,0 +1,44 @@
+@function color($color, $shade: base){
+    @if map-has-key($color__palettes, $color){
+        @if map-has-key(map-get($color__palettes, $color), $key: $shade){
+            @return map-get(map-get($color__palettes, $color), $key: $shade);
+        }@else{
+            @warn "Can't find shade #{$shade} in #{$color} palette.";
+        }
+    }@else{
+        @warn "Can't find #{$color} in $color__palettes.";
+    }
+}
+
+
+// ========================
+// = Font Settings =======
+// ========================
+
+@each $element, $font in $font__families {
+    #{$element}{
+        font-family: $font;
+    }
+}
+
+// ========================
+// = Color Settings =======
+// ========================
+
+@each $element, $color in $background__colors{
+    #{$element}{
+        background-color: $color;
+    }
+}
+
+@each $element, $color in $font__colors{
+    #{$element}{
+        color: $color;
+    }
+}
+
+@each $element, $color in $svg__colors{
+    ##{$element}{
+        fill: $color;
+    }
+}

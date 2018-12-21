@@ -1,0 +1,426 @@
+/* latin-ext */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+}
+
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  font-family: "Helvetica Neue", "Times New Roman", Helvetica, serif;
+}
+
+header {
+  background-color: #3b8bff;
+}
+
+aside {
+  background-color: #227cff;
+}
+
+p {
+  color: #eaeaea;
+}
+
+h1 {
+  color: #eaeaea;
+}
+
+h2 {
+  color: #eaeaea;
+}
+
+h3 {
+  color: #eaeaea;
+}
+
+h4 {
+  color: #eaeaea;
+}
+
+h5 {
+  color: #eaeaea;
+}
+
+h6 {
+  color: #2d2d2d;
+}
+
+#bell {
+  fill: #eaeaea;
+}
+
+#dashboard {
+  fill: #eaeaea;
+}
+
+#members {
+  fill: #eaeaea;
+}
+
+#visits {
+  fill: #eaeaea;
+}
+
+#settings {
+  fill: #eaeaea;
+}
+
+.mobile-hide {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .mobile-hide {
+    display: inline;
+  }
+}
+
+.notification:after {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+}
+
+.warn {
+  background: #e23b3b;
+  border-bottom: 3px solid #cc1e1e;
+}
+
+.info {
+  background: #3b8bff;
+  border-bottom: 3px solid #086dff;
+}
+
+.success {
+  background: #3ac226;
+  border-bottom: 3px solid #33ad21;
+}
+
+.close__button {
+  min-width: 10px;
+  height: auto;
+  fill: #eaeaea;
+  display: inline-block;
+}
+.close__button:hover {
+  cursor: pointer;
+}
+
+.shake {
+  animation: shake 0.7s ease-in-out 0s 1;
+}
+
+@keyframes shake {
+  20% {
+    transform: rotate(-30deg);
+  }
+  40% {
+    transform: rotate(30deg);
+  }
+  60% {
+    transform: rotate(-30deg);
+  }
+  80% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  height: 70px;
+  padding: 0 15px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.header__title {
+  font-size: 1.4rem;
+  margin-right: auto;
+}
+.header__profile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.header__profile--image {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  background: url("../../images/member-2.jpg") no-repeat center center;
+  background-size: cover;
+  display: block;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+.header__notification {
+  position: relative;
+  top: 3px;
+}
+.header__notification:hover {
+  cursor: pointer;
+}
+
+.aside {
+  padding: 10px 0;
+}
+.aside {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.aside__dashboard:hover, .aside__members:hover, .aside__visits, .aside__settings {
+  cursor: pointer;
+}
+
+.dashheader {
+  background: #f2f2f2;
+  height: auto;
+  padding: 15px 0;
+}
+.dashheader {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashheader h2 {
+  color: #2d2d2d;
+  font-size: 1.5rem;
+}
+.dashheader input {
+  width: 80%;
+  background: url("../../images/SVG/finderglass.svg") no-repeat, white;
+  background-size: 3% 50%;
+  background-position-y: center;
+  background-position-x: calc(100% - 15px);
+  margin: 15px 0;
+  padding: 10px 40px 10px 10px;
+  border: 0;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+}
+.dashheader #alert {
+  width: 90%;
+  height: auto;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+.dashheader #alert {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashheader #alert .close_button {
+  align-self: flex-end;
+  margin-left: 15px;
+}
+
+.alerts {
+  background: #086dff;
+  padding: 15px;
+}
+.alerts__item {
+  margin-bottom: 15px;
+}
+.alerts__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.alerts__item:last-of-type {
+  margin-bottom: 0;
+}
+.alerts__item--header {
+  width: 100%;
+}
+.alerts__item--header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.alerts__item--header--title, .alerts__item--header--del {
+  display: inline-block;
+}
+.alerts__item--header--title {
+  margin-right: auto;
+}
+.alerts__item--header--del {
+  fill: #eaeaea;
+}
+.alerts__item--header--del:hover {
+  cursor: pointer;
+}
+
+.charts__traffic {
+  width: 100%;
+  height: 450px;
+  padding: 10px;
+  grid-area: traffic;
+  background: red;
+}
+.charts__traffic h6 {
+  margin-bottom: 10px;
+}
+.charts__traffic canvas {
+  max-height: 250px;
+}
+.charts__users {
+  grid-area: mobile;
+}
+.charts__users, .charts__traffic {
+  width: 100%;
+  height: 250px;
+}
+
+/*# sourceMappingURL=style.css.map */
