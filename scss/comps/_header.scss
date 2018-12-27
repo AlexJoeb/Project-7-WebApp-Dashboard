@@ -1,46 +1,54 @@
-.header{
+.header {
     height: 70px;
 
     padding: 0 15px;
-    
-    @include flex($dir: row, $wrap: wrap){
+
+    color: $white;
+
+    @include flex($dir: row, $wrap: wrap) {
         justify-content: center;
-        align-items:center;
+        align-items: center;
     }
 
-    &__title{
+    @include mq(tablet){
+        width: 94%;
+        position: fixed;
+        z-index: 100;
+    }
+
+    &__title {
         font-size: 1.4rem;
         margin-right: auto;
     }
 
-    &__profile{
-        @include flex($dir: row, $wrap: wrap){
+    &__profile {
+        @include flex($dir: row, $wrap: wrap) {
             justify-content: center;
-            align-items:center;
+            align-items: center;
         }
-        &--image{
+
+        &--image {
             width: 30px;
             height: 30px;
-            
+
             margin: 0 auto;
 
-            background:url("../../images/member-2.jpg") no-repeat center center;
+            background: url("../../images/member-2.jpg") no-repeat center center;
             background-size: cover;
-            
+
             display: block;
 
             border-radius: 50%;
 
             margin: 0 15px;
-            
         }
     }
 
-    &__notification{
+    &__notification {
         position: relative;
         top: 3px;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
     }

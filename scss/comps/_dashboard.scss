@@ -1,0 +1,7 @@
+.dashboard{
+    @include mq(tablet){
+        width: calc(100% -60px);
+        position: relative;
+        top: 70px;
+    }
+}

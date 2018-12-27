@@ -1,24 +1,29 @@
-.aside{
-    
+.aside {
+
     padding: 10px 0;
 
-    @include flex{
+    grid-area: aside;
+
+    @include flex {
         justify-content: space-around;
         align-items: center;
     }
-    &__dashboard:hover, &__members:hover, &__visits, &__settings{
+
+    @include mq(tablet){
+        @include flex($dir: column, $wrap: nowrap);
+
+        min-width: 60px;
+        height: calc(100vh - 70px);
+
+        position: fixed;
+        top:70px;
+        z-index: 99;
+    }
+
+    &__dashboard:hover,
+    &__members:hover,
+    &__visits,
+    &__settings {
         cursor: pointer;
     }
-    // &__dashboard{
-
-    // }
-    // &__members{
-
-    // }
-    // &__visits{
-
-    // }
-    // &__settings{
-
-    // }
 }

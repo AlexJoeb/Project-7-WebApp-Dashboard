@@ -31,12 +31,6 @@
     }
 }
 
-@each $element, $color in $font__colors{
-    #{$element}{
-        color: $color;
-    }
-}
-
 @each $element, $color in $svg__colors{
     ##{$element}{
         fill: $color;

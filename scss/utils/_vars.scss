@@ -95,16 +95,6 @@
         aside: map-get(map-get($color__palettes, blue), $key: dark),
     );
 
-    $font__colors: (
-        p: map-get(map-get($color__palettes, white), $key: base),
-        h1: map-get(map-get($color__palettes, white), $key: base),
-        h2: map-get(map-get($color__palettes, white), $key: base),
-        h3: map-get(map-get($color__palettes, white), $key: base),
-        h4: map-get(map-get($color__palettes, white), $key: base),
-        h5: map-get(map-get($color__palettes, white), $key: base),
-        h6: map-get(map-get($color__palettes, black), $key: base),
-    );
-
     $svg__colors: (
         bell: map-get(map-get($color__palettes, white), $key: base),
         dashboard: map-get(map-get($color__palettes, white), $key: base),

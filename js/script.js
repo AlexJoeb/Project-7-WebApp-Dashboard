@@ -26,40 +26,6 @@
     // == Warning Bar
     const alert = $('#alert');
 
-    // == Charts
-    let trafficChart = document.getElementById('trafficChart').getContext('2d');
-
-    let trafficObject = new Chart(trafficChart,{
-        type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-        data: {
-            labels: ['S','M','T','W','T','F','S'],
-            datasets: [
-                {
-                    label: 'Traffic Per Day',
-                    data: [
-                        310,
-                        412,
-                        558,
-                        457,
-                        610,
-                        595,
-                        328,
-                    ],
-                    backgroundColor: '#3b8bff',
-                    hoverBorderWidth: 2,
-                    hoverBorderColor: '#000',
-                }
-            ],
-        },
-        options: {
-            legend: {
-                display: false,
-            }
-        },
-    });
-
-    trafficObject.render();
-
 // =====================
 // = Functions =========
 // =====================
@@ -106,7 +72,7 @@
 
 
         const desc__container = $(`<p class="alerts__item--desc">${desc}</div>`);
-
+        
         header__container.append(header__title);
         header__container.append(header__del);
 
