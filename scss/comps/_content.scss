@@ -1,7 +1,4 @@
 .content{
     height: auto;
     @include flex($dir: column, $wrap: nowrap);
-    @include mq(tablet){
-        @include flex($dir: row, $wrap: nowrap);
-    }
 }

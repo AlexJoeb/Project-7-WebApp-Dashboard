@@ -22,19 +22,21 @@ body, html{
     }
 }
 
-.warn {
-    background: color(red);
-    border-bottom: 3px solid color(red, x-dark);
-}
-
-.info {
-    background: color(blue);
-    border-bottom: 3px solid color(blue, x-dark);
-}
-
-.success {
-    background: color(green, dark);
-    border-bottom: 3px solid color(green, x-dark);
+.notification{
+    &--warn {
+        background: color(red);
+        border-bottom: 3px solid color(red, x-dark);
+    }
+    
+    &--info {
+        background: color(blue);
+        border-bottom: 3px solid color(blue, x-dark);
+    }
+    
+    &--success {
+        background: color(green, dark);
+        border-bottom: 3px solid color(green, x-dark);
+    }
 }
 
 .close__button {

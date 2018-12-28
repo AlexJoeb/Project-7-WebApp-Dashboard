@@ -31,9 +31,8 @@
     }
 
     
-    &__alert{
+    &__notification{
         &--wrapper{
-            background:$red;
 
             @include grid($temp: auto auto / 90%, $areas: "close" "message"){
                 justify-content: center;
@@ -42,12 +41,10 @@
             }
 
             width:80%;
-            margin: 0 auto;
+            margin: 0 auto 10px;
             padding: 15px 0;
 
             border-radius: 5px;
-            border-left: 3px solid color(red, x-dark);
-            border-bottom: 3px solid color(red, x-dark);
         }
         &--message{
             grid-area: message;

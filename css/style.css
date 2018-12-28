@@ -129,17 +129,15 @@ body, html {
   background: red;
 }
 
-.warn {
+.notification--warn {
   background: #e23b3b;
   border-bottom: 3px solid #cc1e1e;
 }
-
-.info {
+.notification--info {
   background: #3b8bff;
   border-bottom: 3px solid #086dff;
 }
-
-.success {
+.notification--success {
   background: #3ac226;
   border-bottom: 3px solid #33ad21;
 }
@@ -251,13 +249,6 @@ table {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (min-width: 768px) {
-  .header {
-    width: 94%;
-    position: fixed;
-    z-index: 100;
-  }
-}
 .header__title {
   font-size: 1.4rem;
   margin-right: auto;
@@ -298,26 +289,14 @@ table {
   justify-content: space-around;
   align-items: center;
 }
-@media only screen and (min-width: 768px) {
-  .aside {
-    min-width: 60px;
-    height: calc(100vh - 70px);
-    position: fixed;
-    top: 70px;
-    z-index: 99;
-  }
-  .aside {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-}
 .aside__dashboard:hover, .aside__members:hover, .aside__visits, .aside__settings {
   cursor: pointer;
 }
 
 .alerts {
   background: #086dff;
+  color: #eaeaea;
+  fill: #eaeaea;
   padding: 15px;
 }
 .alerts__item {
@@ -380,16 +359,13 @@ table {
   transform: translateY(-50%);
   width: 15px;
 }
-.dashboard__header__alert--wrapper {
-  background: #e23b3b;
+.dashboard__header__notification--wrapper {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 10px;
   padding: 15px 0;
   border-radius: 5px;
-  border-left: 3px solid #cc1e1e;
-  border-bottom: 3px solid #cc1e1e;
 }
-.dashboard__header__alert--wrapper {
+.dashboard__header__notification--wrapper {
   display: grid;
   grid-template: auto auto/90%;
   grid-template-areas: "close" "message";
@@ -397,17 +373,17 @@ table {
   align-items: center;
   grid-gap: 10px;
 }
-.dashboard__header__alert--message {
+.dashboard__header__notification--message {
   grid-area: message;
   color: #eaeaea;
   text-align: left;
 }
-.dashboard__header__alert--close {
+.dashboard__header__notification--close {
   width: 8px;
   fill: #eaeaea;
   transition: fill 0.4s;
 }
-.dashboard__header__alert--close:hover {
+.dashboard__header__notification--close:hover {
   fill: #bfbfbf;
   cursor: pointer;
 }
@@ -419,21 +395,6 @@ table {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-}
-@media only screen and (min-width: 768px) {
-  .content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .dashboard {
-    width: calc(100% -60px);
-    position: relative;
-    top: 70px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
