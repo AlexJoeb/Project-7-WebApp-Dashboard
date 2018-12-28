@@ -30,7 +30,6 @@ data:{
 options:{
   legend:{
   display: false
-  // position:'left'
 },
 responsive: true,
 maintainAspectRatio: true,

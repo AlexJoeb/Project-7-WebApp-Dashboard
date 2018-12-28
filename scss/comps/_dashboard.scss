@@ -1,2 +1,96 @@
-.dashboard{
+.dashboard {
+    &__header {
+        text-align: center;
+
+        padding: 15px 0;
+
+        &__title {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        &__search {
+            margin: 10px 0;
+            position: relative;
+
+            input {
+                width: 80%;
+                padding: 10px 10px 10px 15px;
+                border: 0;
+                border-radius: 5px;
+            }
+
+            svg {
+                position: absolute;
+                right: 10%;
+                top: 50%;
+
+                transform: translateY(-50%);
+
+                width: 15px;
+            }
+        }
+
+
+        &__notification {
+            &--wrapper {
+
+                @include grid($temp: auto auto / 90%, $areas: "close""message") {
+                    justify-content: center;
+                    align-items: center;
+                    grid-gap: 10px;
+                }
+
+                width:80%;
+                margin: 0 auto 10px;
+                padding: 15px 0;
+
+                border-radius: 5px;
+            }
+
+            &--message {
+                grid-area: message;
+                color: $white;
+                text-align: left;
+            }
+
+            &--close {
+                width: 8px;
+                fill: $white;
+                transition: fill .4s;
+
+                &:hover {
+                    fill: color(gray, dark);
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+    &__charts{
+        width: 80%;
+        margin: 0 auto;
+        @include flex($wrap: wrap){
+            justify-content: center;
+            align-items: center;
+        }
+        p, ul, li, &--traffic--header{display:inline-block;}
+
+        @include mq(tablet){
+            &--traffic{
+                flex-basis: 100%;
+
+                canvas{
+                    width: 100%;
+                }
+            }
+        }
+
+        &--traffic--header{
+            @include flex($dir: row, $wrap: nowrap){
+                justify-content: space-between;
+                align-items:center;
+            }
+        }
+    }
 }

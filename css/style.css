@@ -334,6 +334,15 @@ table {
   cursor: pointer;
 }
 
+.content {
+  height: auto;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 .dashboard__header {
   text-align: center;
   padding: 15px 0;
@@ -387,14 +396,34 @@ table {
   fill: #bfbfbf;
   cursor: pointer;
 }
-
-.content {
-  height: auto;
+.dashboard__charts {
+  width: 80%;
+  margin: 0 auto;
 }
-.content {
+.dashboard__charts {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard__charts p, .dashboard__charts ul, .dashboard__charts li, .dashboard__charts--traffic--header {
+  display: inline-block;
+}
+@media only screen and (min-width: 768px) {
+  .dashboard__charts--traffic {
+    flex-basis: 100%;
+  }
+  .dashboard__charts--traffic canvas {
+    width: 100%;
+  }
+}
+.dashboard__charts--traffic--header {
+  display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

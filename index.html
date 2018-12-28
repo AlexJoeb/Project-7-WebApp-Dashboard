@@ -77,12 +77,32 @@
                         </form>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.82 66.82"><title>finderglass</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M63.5,59.14,41.3,36.93a23,23,0,1,0-6.74,6,5,5,0,0,0,.37.42L57.14,65.5a4.5,4.5,0,0,0,6.36-6.36ZM6,23A17,17,0,1,1,23,40,17,17,0,0,1,6,23Z"/></g></g></svg>
                     </div>
+                </section>
 
-                    <!-- <div class="dashboard__header__notification--wrapper">
-                        <svg class="dashboard__header__notification--close"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.2 31.2"><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M29.88,23.52a4.5,4.5,0,1,1-6.36,6.36L15.6,22,7.68,29.88a4.5,4.5,0,0,1-6.37-6.36L9.23,15.6,1.31,7.68A4.5,4.5,0,0,1,7.68,1.31L15.6,9.23l7.92-7.92a4.5,4.5,0,0,1,6.36,6.37L22,15.6Z"/></g></g></svg>
-                        <p class="dashboard__header__notification--message"><strong>Woah!</strong> This is an alert. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro est aperiam maxime laudantium dolorum ea quidem, odit doloribus. Ut nostrum, corporis dolor ipsa dicta nam similique doloremque deleniti accusamus expedita?</p>
-                    </div> -->
-
+                <section class="dashboard__charts">
+                    <div class="dashboard__charts--traffic">
+                        <div class="dashboard__charts--traffic--header">
+                            <p>Daily Traffic</p>
+                            <ul>
+                                <li>Hourly</li>
+                                <li>Daily</li>
+                                <li>Weekly</li>
+                            </ul>
+                        </div>
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                    <div class="dashboard__charts--dtraffic">
+                        <div class="dashboard__charts--dtraffic--header">
+                            <p>Daily Traffic</p>
+                            <canvas id="dailyTrafficChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="dashboard__charts--mtraffic">
+                        <div class="dashboard__charts--mtraffic--header">
+                            <p>Daily Traffic</p>
+                            <canvas id="mobileUsersChart"></canvas>
+                        </div>
+                    </div>
                 </section>
 
             </section>
@@ -93,46 +113,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="js/charts.js"></script>
     <script src="js/script.js"></script>
 </body>
 
 </html>
-
-<!-- <div class="dashboard">
-    <section class="dashheader">
-        <h2>Dashboard</h2>
-        <input type="text" name="search" id="search" placeholder="Search..." autocomplete="off" />
-        <div id="alert" class="success">
-            <p>This is a warning!</p>
-            <div class="close__button">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.2 31.2">
-                    <g data-name="Layer 2">
-                        <path d="M29.88 23.52a4.5 4.5 0 1 1-6.36 6.36L15.6 22l-7.92 7.88a4.5 4.5 0 0 1-6.37-6.36l7.92-7.92-7.92-7.92a4.5 4.5 0 0 1 6.37-6.37l7.92 7.92 7.92-7.92a4.5 4.5 0 0 1 6.36 6.37L22 15.6z"
-                            data-name="Layer 1" />
-                    </g>
-                </svg>
-            </div>
-        </div>
-    </section>
-
-    <div class="charts">
-        <div class="charts__traffic">
-            <h6 class="charts__title">Traffic</h6>
-            <div>
-                <canvas id="trafficChart"></canvas>
-            </div>
-        </div>
-        <div class="charts__daily__traffic">
-            <h6 class="charts__title">Daily Traffic</h6>
-            <div>
-                <canvas id="dailyTrafficChart"></canvas>
-            </div>
-        </div>
-        <div class="charts__mobile__users">
-            <h6 class="charts__title">Mobile Users</h6>
-            <div>
-                <canvas id="mobileUsersChart"></canvas>
-            </div>
-        </div>
-    </div>
-</div> -->
