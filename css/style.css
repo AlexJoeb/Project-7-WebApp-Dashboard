@@ -38,6 +38,33 @@
   font-family: "Roboto", sans-serif;
 }
 
+.header__title {
+  color: #eee;
+  fill: #eee;
+}
+
+.header__profile__name {
+  color: #eee;
+  fill: #eee;
+}
+
+.header__bell {
+  color: #eee;
+  fill: #eee;
+}
+
+.header__title {
+  font-size: 1.1rem;
+}
+
+.header__bell {
+  font-size: 1.1rem;
+}
+
+.header__profile__name {
+  font-size: 1.1rem;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -128,7 +155,7 @@ body, html {
 .container .header__bell {
   height: 25px;
   padding-right: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
   position: relative;
 }
 .container .header__bell svg {
@@ -136,6 +163,24 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.container .header__profile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.container .header__profile__picture {
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  background: url("../../images/member-1.jpg") no-repeat center center;
+  background-size: cover;
+  display: inline-block;
+  margin: 0 10px;
+}
+.container .header__profile__name {
+  display: inline-block;
 }
 .container .header__profile__name span {
   display: none;

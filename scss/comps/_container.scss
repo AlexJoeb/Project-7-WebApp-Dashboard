@@ -23,7 +23,7 @@
         &__bell{
             height: 25px;
             padding-right: 10px;
-            margin-right: 10px;
+            margin-right: 5px;
             position: relative;
             svg{
                 position: absolute;
@@ -34,7 +34,20 @@
         }
 
         &__profile{
+            @include flex{
+                align-items: center;
+            }
+            &__picture{
+                height:30px;
+                width: 30px;
+                border-radius: 20px;
+                background: url("../../images/member-1.jpg") no-repeat center center;
+                background-size: cover;
+                display:inline-block;
+                margin: 0 10px;
+            }
             &__name{
+                display:inline-block;
                 span{
                     display:none;
                     @include mq(tablet){

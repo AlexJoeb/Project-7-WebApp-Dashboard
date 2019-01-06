@@ -13,6 +13,15 @@
         header__profile__name: $font__stack--primary,
     );
 
+    $font__size--title: 1.1rem;
+    $font__size--p: .8rem;
+
+    $font__sizes: (
+        header__title: $font__size--title,
+        header__bell: $font__size--title,
+        header__profile__name: $font__size--title,
+    );
+
 
 // =========================
 // == Colors
@@ -31,6 +40,7 @@
     $font__colors: (
         header__title: $font__color--primary,
         header__profile__name: $font__color--primary,
+        header__bell: $font__color--primary,
     );
 
     $color-palette: (

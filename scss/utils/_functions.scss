@@ -17,3 +17,16 @@
         font-family: $font;
     }
 }
+
+@each $class, $color in $font__colors {
+    .#{$class}{
+        color: $color;
+        fill:$color;
+    }
+}
+
+@each $class, $size in $font__sizes {
+    .#{$class}{
+        font-size: $size;
+    }
+}
