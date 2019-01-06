@@ -27,14 +27,7 @@ let alerts = [{
 }
 ];
 // = List of notifications to display
-let notifications = [{
-        type: "warn",
-        desc: "<strong>Woah</strong> It's a <em>notification.</em>",
-    },
-    {
-        type: "success",
-        desc: "<strong>Woah</strong> It's a <em>notification.</em>",
-    },
+let notifications = [
     {
         type: "info",
         desc: "<strong>Woah</strong> It's a <em>notification.</em>",

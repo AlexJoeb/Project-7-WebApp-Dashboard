@@ -1,114 +1,88 @@
-// ============================//
-// = Font Settings ============//
-// ============================//
+// =========================
+// == Font Settings
+// =========================
 
-// == Font Family ==
-
-    // = Font Import =
+    // == Font Import
     @import "fonts";
 
-    // Fonts Family Variables
+    $font__stack--primary: "Roboto", sans-serif;
+    $font__stack--secondary: "Helvetica Neue", Helvetica, serif;
 
-    $font__family--primary: "Roboto", sans-serif;
-    $font__family--secondary: "Helvetica Neue", "Times New Roman", Helvetica, serif;
-
-    $font__families: (
-        h1: $font__family--primary,
-        h2: $font__family--primary,
-        h3: $font__family--primary,
-        h4: $font__family--primary,
-        h5: $font__family--primary,
-        h6: $font__family--primary,
-        p: $font__family--primary,
-        a: $font__family--secondary,
+    $font__stacks: (
+        header__title: $font__stack--primary,
+        header__profile__name: $font__stack--primary,
     );
 
-// == Font Weights ==
 
-    $font__weights: (
-        light: 300,
-        normal: 400,
-        bold: 700,
+// =========================
+// == Colors
+// =========================
+
+    $black: #333;
+    $gray: #666;
+    $white: #eee;
+    $blue: #0BB5FF;
+    $red: #E50000;
+    $green: #007300;
+
+    $font__color--primary: $white;
+    $font__color--secondary: $blue;
+
+    $font__colors: (
+        header__title: $font__color--primary,
+        header__profile__name: $font__color--primary,
     );
 
-// ============================//
-// = Color Settings ===========//
-// ============================//
-
-    $black: #2d2d2d;
-    $white: #eaeaea;
-    $gray: #cccccc;
-    $blue: #3b8bff;
-    $green: #41d62b;
-    $red: #e23b3b;
-
-    $font__color--primary: $black;
-    $font__color--secondary: $white;
-
-    $color__palettes: (
+    $color-palette: (
         black: (
-            x-dark: darken($black, 10%),
-            dark: darken($black, 5%),
-            base: $black,
             light: lighten($black, 5%),
-            x-light: lighten($black, 15%),
+            x-light: lighten($black, 5%),
+            base: $black,
+            dark: darken($black, 5%),
+            x-dark: darken($black, 5%),
         ),
         white: (
-            x-dark: darken($white, 10%),
-            dark: darken($white, 5%),
-            base: $white,
             light: lighten($white, 5%),
-            x-light: lighten($white, 15%),
+            x-light: lighten($white, 5%),
+            base: $white,
+            dark: darken($white, 5%),
+            x-dark: darken($white, 5%),
         ),
         gray: (
-            x-dark: darken($gray, 10%),
-            dark: darken($gray, 5%),
-            base: $gray,
             light: lighten($gray, 5%),
-            x-light: lighten($gray, 15%),
+            x-light: lighten($gray, 5%),
+            base: $gray,
+            dark: darken($gray, 5%),
+            x-dark: darken($gray, 5%),
         ),
         blue: (
-            x-dark: darken($blue, 10%),
-            dark: darken($blue, 5%),
-            base: $blue,
             light: lighten($blue, 5%),
-            x-light: lighten($blue, 15%),
-        ),
-        green: (
-            x-dark: darken($green, 10%),
-            dark: darken($green, 5%),
-            base: $green,
-            light: lighten($green, 5%),
-            x-light: lighten($green, 15%),
+            x-light: lighten($blue, 5%),
+            base: $blue,
+            dark: darken($blue, 5%),
+            x-dark: darken($blue, 5%),
         ),
         red: (
-            x-dark: darken($red, 10%),
-            dark: darken($red, 5%),
-            base: $red,
             light: lighten($red, 5%),
-            x-light: lighten($red, 15%),
+            x-light: lighten($red, 5%),
+            base: $red,
+            dark: darken($red, 5%),
+            x-dark: darken($red, 5%),
+        ),
+        green: (
+            light: lighten($green, 5%),
+            x-light: lighten($green, 5%),
+            base: $green,
+            dark: darken($green, 5%),
+            x-dark: darken($green, 5%),
         ),
     );
 
-    $background__colors: (
-        header: map-get(map-get($color__palettes, blue), $key: base),
-        aside: map-get(map-get($color__palettes, blue), $key: dark),
-    );
-
-    $svg__colors: (
-        bell: map-get(map-get($color__palettes, white), $key: base),
-        dashboard: map-get(map-get($color__palettes, white), $key: base),
-        members: map-get(map-get($color__palettes, white), $key: base),
-        visits: map-get(map-get($color__palettes, white), $key: base),
-        settings: map-get(map-get($color__palettes, white), $key: base),
-    );
-
-// ============================//
-// = Break Point Settings =====//
-// ============================//
-
+// =========================
+// == Misc
+// =========================
 $break-points: (
     mobile: 320px,
     tablet: 768px,
-    desktop: 1024px,
+    desktop: 1024,
 );
