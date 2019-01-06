@@ -12,6 +12,7 @@
         header__title: $font__stack--primary,
         header__profile__name: $font__stack--primary,
         content__title: $font__stack--primary,
+        content__main__alert--message: $font__stack--primary,
     );
 
     $font__size--title: 1.1rem;
@@ -22,6 +23,7 @@
         header__bell: $font__size--title,
         header__profile__name: $font__size--title,
         content__title: $font__size--title,
+        content__main__alert--message: $font__size--p,
     );
 
 
@@ -33,7 +35,7 @@
     $gray: #666;
     $white: #eee;
     $blue: #0BB5FF;
-    $red: #E50000;
+    $red: #EA1744;
     $green: #007300;
 
     $font__color--primary: $white;
@@ -45,6 +47,7 @@
         header__profile__name: $font__color--primary,
         header__bell: $font__color--primary,
         content__title: $font__color--second,
+        content__main__alert--message: $font__color--primary,
     );
 
     $color-palette: (
