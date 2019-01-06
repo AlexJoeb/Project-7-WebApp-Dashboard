@@ -1,0 +1,32 @@
+.aside{
+    width: 100%;
+    height: 60px;
+    
+    background: color(blue, dark);
+
+    grid-area: aside;
+
+    @include flex{
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    svg{
+        width: 20px;
+    }
+
+    &__dashboard, &__members, &__visits, &__settings {
+        display:inline-block;
+        height: 100%;
+
+        @include grid{
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__current {
+        border-bottom: 4px solid $white;
+    }
+
+}

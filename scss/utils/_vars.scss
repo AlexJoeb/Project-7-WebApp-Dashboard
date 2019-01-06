@@ -11,6 +11,7 @@
     $font__stacks: (
         header__title: $font__stack--primary,
         header__profile__name: $font__stack--primary,
+        content__title: $font__stack--primary,
     );
 
     $font__size--title: 1.1rem;
@@ -20,6 +21,7 @@
         header__title: $font__size--title,
         header__bell: $font__size--title,
         header__profile__name: $font__size--title,
+        content__title: $font__size--title,
     );
 
 
@@ -35,12 +37,14 @@
     $green: #007300;
 
     $font__color--primary: $white;
-    $font__color--secondary: $blue;
+    $font__color--second: $gray;
+    $font__color--third: $blue;
 
     $font__colors: (
         header__title: $font__color--primary,
         header__profile__name: $font__color--primary,
         header__bell: $font__color--primary,
+        content__title: $font__color--second,
     );
 
     $color-palette: (

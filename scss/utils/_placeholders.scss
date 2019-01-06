@@ -1,0 +1,35 @@
+%pointer{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+%input{
+    width: 90%;
+    height: 20px;
+
+    background: url("../../images/SVG/finderglass.svg") no-repeat 95% center;
+    background-size: 15px;
+
+    justify-self: flex-end;
+
+    padding: 15px 15% 15px 15px;
+
+    border: 1px solid color(white, x-dark);
+    border-radius: 5px;
+
+    color: color(gray, x-light);
+
+    &::placeholder{
+        color: color(white, x-dark);
+    }
+
+    &:active, &:focus{
+        outline: none;
+    }
+}
+
+%full-area{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,47 @@
+.content{
+    height: 100%;
+    width: 100%;
+
+    @include flex($wrap: wrap){
+        justify-content: space-between;
+    }
+
+    &__title{
+        width: 100px;
+        height: 60px;
+
+        @include grid{
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__searchbox{
+        height: 60px;
+
+        display: inline-block;
+
+        border-left: 1px solid color(white, x-dark);
+        border-bottom: 1px solid color(white, x-dark);
+
+        padding-right: 5px;
+
+        flex-grow: 1;
+
+        background:color(white, light);
+
+            
+        @include flex {
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        input{
+            @extend %input;
+        }
+    }
+
+    &__main{
+        @extend %full-area;
+    }
+}
