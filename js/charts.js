@@ -28,6 +28,7 @@ let trafficChartVar = new Chart(trafficChart, {
     }]
   },
   options: {
+    responsive: false,
     legend: {
       display: false
     },
@@ -35,7 +36,7 @@ let trafficChartVar = new Chart(trafficChart, {
 });
 
 // BAR CHART
-let dailyTraffic = document.getElementById("dailyTrafficChart").getContext('2d');
+let dailyTraffic = document.getElementById('dailyTrafficChart').getContext('2d');
 
 let dailyTrafficVar = new Chart(dailyTraffic, {
   type: 'bar',
@@ -61,7 +62,7 @@ let dailyTrafficVar = new Chart(dailyTraffic, {
     }]
   },
   options: {
-    responsive: true,
+    responsive: false,
     legend: {
       display: false,
 
@@ -101,14 +102,9 @@ let mobileChartVar = new Chart(mobileChart, {
     }]
   },
   options: {
-    responsive: true,
-    maintainAspectRatio: true,
+    responsive: false,
     legend: {
       display: false,
     },
   }
 });
-
-mobileChartVar.render();
-dailyTrafficVar.render();
-trafficChartVar.render();

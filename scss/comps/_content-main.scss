@@ -34,4 +34,51 @@
 
   }
 
+
+  &__charts{
+    @include flex($wrap: wrap);
+    &--traffic, &--dtraffic, &--mtraffic {
+      canvas{
+        margin-top: 15px;
+      }
+    }
+
+    &--traffic {
+      width: auto;
+      margin: 0 auto;
+
+      &--header{
+        @include flex;
+
+        &--title{
+          display: inline-block;
+          flex-grow: 1;
+        }
+
+        &--timecontrol{
+          display:inline-block;
+          li{
+            display:inline-block;
+
+            padding: 3px 3px;
+            border-radius: 3px;
+            
+            &:hover{
+              cursor: pointer;
+              color:white;
+              background:color(blue, dark);
+            }
+          }
+        }
+      }
+    }
+    &--dtraffic {
+      width: auto;
+      margin: 0 auto;
+    }
+    &--mtraffic {
+      width: auto;
+      margin: 0 auto;
+    }
+  }
 }

@@ -8,3 +8,8 @@ body,html{
 
     background: $white;
 }
+
+p, li{
+    font-family: $font__stack--primary;
+    font-weight: 300;
+}
