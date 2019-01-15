@@ -324,8 +324,8 @@ p, li {
 }
 .aside__dashboard, .aside__members, .aside__visits, .aside__settings {
   display: grid;
-  grid-template: auto/auto;
-  grid-template-areas: auto;
+  grid-template: 1;
+  grid-template-areas: none;
   justify-content: center;
   align-items: center;
 }
@@ -349,8 +349,8 @@ p, li {
 }
 .content__title {
   display: grid;
-  grid-template: auto/auto;
-  grid-template-areas: auto;
+  grid-template: 1;
+  grid-template-areas: none;
   justify-content: center;
   align-items: center;
 }
@@ -392,15 +392,15 @@ p, li {
 .content__main__alert {
   display: grid;
   grid-template: 1fr/30px 1fr;
-  grid-template-areas: auto;
+  grid-template-areas: none;
   justify-content: center;
   align-items: center;
   grid-gap: 5px;
 }
 .content__main__alert--close {
   display: grid;
-  grid-template: auto/auto;
-  grid-template-areas: auto;
+  grid-template: 1;
+  grid-template-areas: none;
   justify-content: center;
   align-items: center;
 }
@@ -415,6 +415,7 @@ p, li {
 }
 .content__main__charts--traffic canvas, .content__main__charts--dtraffic canvas, .content__main__charts--mtraffic canvas {
   margin-top: 15px;
+  margin-bottom: 25px;
 }
 .content__main__charts--traffic {
   width: auto;
@@ -436,6 +437,7 @@ p, li {
   display: inline-block;
   padding: 3px 3px;
   border-radius: 3px;
+  font-size: 0.75rem;
 }
 .content__main__charts--traffic--header--timecontrol li:hover {
   cursor: pointer;
@@ -449,6 +451,40 @@ p, li {
 .content__main__charts--mtraffic {
   width: auto;
   margin: 0 auto;
+}
+
+.content__main__boxes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+@media only screen and (min-width: 1024px) {
+  .content__main__boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.content__main__boxes--nm, .content__main__boxes--ra, .content__main__boxes--mu, .content__main__boxes--set {
+  flex-basis: 100%;
+  height: 450px;
+}
+@media only screen and (min-width: 1024px) {
+  .content__main__boxes--nm, .content__main__boxes--ra, .content__main__boxes--mu, .content__main__boxes--set {
+    flex-basis: 50%;
+  }
+}
+.content__main__boxes--nm {
+  background: red;
+}
+.content__main__boxes--ra {
+  background: green;
+}
+.content__main__boxes--mu {
+  background: blue;
+}
+.content__main__boxes--set {
+  background: yellow;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -40,6 +40,7 @@
     &--traffic, &--dtraffic, &--mtraffic {
       canvas{
         margin-top: 15px;
+        margin-bottom: 25px;
       }
     }
 
@@ -62,6 +63,8 @@
 
             padding: 3px 3px;
             border-radius: 3px;
+
+            font-size: .75rem;
             
             &:hover{
               cursor: pointer;
