@@ -7,7 +7,7 @@
     }
 }
 
-@mixin grid($temp: 1fr/1fr, $areas: none){
+@mixin grid($temp: 1fr #{"/"} 1fr, $areas: none){
     &{
         display:grid;
         grid-template: $temp;
