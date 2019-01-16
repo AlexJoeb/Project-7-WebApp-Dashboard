@@ -483,7 +483,7 @@ p, li {
 }
 .content__main__boxes--nm {
   border-left: 0;
-  padding: 0 5px;
+  padding: 0 15px;
 }
 @media only screen and (min-width: 768px) {
   .content__main__boxes--nm {
@@ -492,14 +492,16 @@ p, li {
   }
 }
 .content__main__boxes--nm {
-  display: grid;
-  grid-template: 60px 1fr / 1fr;
-  grid-template-areas: "header" "content";
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 .content__main__boxes--nm--header {
-  font-size: 1.3rem;
-  justify-self: start;
-  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 10px;
+  color: #737373;
 }
 .content__main__boxes--nm--content {
   display: flex;
@@ -508,7 +510,7 @@ p, li {
   justify-content: space-around;
 }
 .content__main__boxes--nm--user {
-  padding: 0 10px 10px;
+  padding: 25px 10px 25px;
   border-bottom: 1px solid #e1e1e1;
 }
 .content__main__boxes--nm--user {
@@ -519,13 +521,13 @@ p, li {
   align-items: center;
 }
 .content__main__boxes--nm--user:last-of-type {
-  border-bottom: 0;
+  border: 0;
 }
 .content__main__boxes--nm--user--picture {
   margin-right: 15px;
   width: 30px;
   height: 30px;
-  background: url("../../images/member-2.jpg") no-repeat center center;
+  background: url("../../images/member-1.jpg") no-repeat center center;
   background-size: cover;
   border-radius: 20px;
 }
