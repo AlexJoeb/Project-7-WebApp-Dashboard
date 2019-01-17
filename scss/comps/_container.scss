@@ -2,5 +2,9 @@
     width: 100%;
     height: 100%;
 
-    @include grid($temp: 100px 60px auto / auto, $areas: "header" "aside" "content");
+    @include grid($temp: 100px 60px 1fr / 1fr, $areas: "header" "aside" "content");
+    
+    @include mq(tablet){
+        @include grid($temp: 100px 1fr / 60px 1fr, $areas: "header header" "aside content");
+    }
 }

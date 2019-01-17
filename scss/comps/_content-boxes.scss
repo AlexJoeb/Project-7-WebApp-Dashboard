@@ -50,11 +50,7 @@
 
       padding: 25px 10px 25px;
 
-      border-bottom: 1px solid color(white, x-dark);
-
-      &:last-of-type{
-        border: 0;
-      }
+      
 
       &--picture {
         @include picture;

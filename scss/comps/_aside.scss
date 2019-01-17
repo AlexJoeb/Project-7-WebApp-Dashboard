@@ -11,12 +11,25 @@
         align-items: center;
     }
 
+    @include mq(tablet){
+        height: calc(100vh - 100px);
+        @include flex($dir: column, $wrap: nowrap){
+
+        }
+    }
+
     svg{
         width: 20px;
+        @include mq(tablet){
+            height: 20px;
+        }
     }
 
     &__dashboard, &__members, &__visits, &__settings {
         display:inline-block;
+    @include mq(tablet){
+        height: 35px;
+    }
         height: 100%;
 
         @include grid{

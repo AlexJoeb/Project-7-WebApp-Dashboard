@@ -13,3 +13,18 @@ p, li{
     font-family: $font__stack--primary;
     font-weight: 300;
 }
+
+.notification {
+    position: relative;
+    &::after{
+        content:"";
+        position: absolute;
+        bottom: 5px;
+        left:60%;
+        width: 8px;
+        height: 8px;
+
+        border-radius: 20px;
+        background:$red;
+    }
+}
