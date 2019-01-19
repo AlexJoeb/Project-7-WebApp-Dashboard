@@ -27,14 +27,11 @@
     }
 
     &--header{
-      font-size:1rem;
-      font-weight: 400;
-      margin-left: 10px;
-      
-      color:color(gray, x-light);
+      @extend %box-title;
     }
 
     &--content{
+      width: 100%;
       margin: 0 auto;
       @include flex($dir: column){
         justify-content: space-around;
@@ -64,11 +61,114 @@
       }
     }
 
-  } &--ra{
-    border-right: 0;
-  } &--mu{
+  }
+  
+  &--ra{
+    @include mq(tablet){
+      border-right: 0;
+    }
+
+    @include flex($dir:column){
+      justify-content: center;
+    }
+
+    &--header{
+      @extend %box-title;
+    }
+
+    &--content{
+      width: 100%;
+      margin: 0 auto;
+      @include flex($dir: column){
+        justify-content: space-around;
+      }
+    }
+
+    &--user{
+      @include flex{
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      padding: 25px 10px 25px;
+
+      border-bottom: 1px solid color(white, x-dark);
+
+      &:last-of-type{
+        border: 0;
+      }
+
+      &--picture {
+        @include picture;
+      }
+
+      &--info{
+        @include push(right);
+      }
+    }
+
+  } 
+  
+  &--mu{
     border-left: 0;
-  } &--set{
+
+    @include flex($dir: column){
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--header{
+      @extend %box-title;
+      align-self: flex-start;
+      margin-bottom: 25px;
+    }
+
+    &--content{
+      input, textarea, button{
+        display:block;
+      }
+
+      width: 80%;
+      height: 70%;
+
+      input{
+        @extend %input;
+        background: color(white, x-light);
+        width: 100%;
+        border-radius: 5px;
+
+        &::placeholder{
+          color:color(gray, x-light);
+        }
+      }
+
+      textarea{
+        margin: 15px 0;
+        @extend %input;
+        background: color(white, x-light);
+        height: 200px;
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      button{
+        padding: 10px 10px;
+        width: 100%;
+
+        margin: 0 auto;
+
+        border: 0;
+        border-radius: 5px;
+        background: color(blue);
+        
+        color:color(white);
+        font-weight: bold;
+        font-size: 1.125rem;
+      }
+    }
+  } 
+  
+  &--set{
     border-right: 0;
     @include mq(tablet){
       border-left: 0;
