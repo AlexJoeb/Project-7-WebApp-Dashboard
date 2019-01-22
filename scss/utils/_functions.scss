@@ -1,3 +1,7 @@
+@function threeColWidth($gap: 30px){
+    @return calc(100% / 3 - 30px);
+}
+
 @function color($color, $shade: base){
     @if map-has-key($map: $color-palette, $key: $color){
         @if map-has-key($map: map-get($color-palette, $color), $key: $shade){
