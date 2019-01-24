@@ -282,6 +282,24 @@ a {
   text-decoration: none;
 }
 
+.shake {
+  animation: wiggle 0.5s;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(45deg);
+  }
+  80% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .container {
   width: 100%;
   height: 100%;
@@ -320,12 +338,16 @@ a {
   padding-right: 10px;
   position: relative;
 }
+.header__bell:hover svg {
+  width: 25px;
+}
 .header__bell svg {
   position: absolute;
   width: 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: width 0.5s;
 }
 .header__profile {
   display: flex;
@@ -491,6 +513,9 @@ a {
 .content__main__alert--close svg {
   width: 9px;
   fill: #eee;
+}
+.content__main__charts {
+  margin-top: 25px;
 }
 .content__main__charts {
   display: flex;
@@ -866,6 +891,62 @@ a {
   background: white;
   transition: 0.4s;
   transform: scale(1.1);
+}
+
+.notifications {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  padding: 0 15px 15px;
+  background: #00a8f1;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.notifications svg {
+  width: 8px;
+  fill: #e1e1e1;
+}
+.notifications {
+  display: grid;
+  grid-template: 25px 1fr/1fr;
+  grid-template-areas: "close" "content";
+  grid-gap: 10px;
+}
+.notifications__close {
+  align-self: center;
+}
+.notifications__content__item {
+  margin-bottom: 10px;
+}
+.notifications__content__item {
+  display: grid;
+  grid-template: 1fr/15px 1fr;
+  grid-template-areas: "close content";
+}
+.notifications__content__item__close {
+  justify-self: center;
+  align-self: start;
+}
+.notifications__content__item__close {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: none;
+  justify-items: center;
+  align-items: center;
+}
+.notifications__content__item__close svg {
+  width: 5px;
+  height: 5px;
+  fill: #eee;
+  position: relative;
+  top: 1.7px;
+}
+.notifications__content__item__message {
+  align-self: center;
+  font-size: 0.6rem;
+  color: #e1e1e1;
 }
 
 /*# sourceMappingURL=style.css.map */

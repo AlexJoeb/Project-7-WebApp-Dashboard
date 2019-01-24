@@ -1,0 +1,58 @@
+.notifications {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: auto;
+
+  padding: 0 15px 15px;
+
+  background: color(blue,x-dark);
+
+  box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+
+  svg{
+    width: 8px;
+    fill: color(white, x-dark);
+  }
+
+  @include grid($temp: 25px 1fr / 1fr, $areas: "close" "content"){
+    grid-gap: 10px;
+  }
+
+  &__close{
+    align-self:center;
+  }
+
+  &__content{
+    &__item{
+      @include grid($temp: 1fr / 15px 1fr, $areas: "close content");
+      margin-bottom: 10px;
+      &__close{
+        justify-self: center;
+        align-self: start;
+        
+        @include grid{
+          justify-items: center;
+          align-items: center;
+        }
+
+        svg{
+          width: 5px;
+          height: 5px;
+          fill:color(white);
+          position: relative;
+          top:1.7px;
+        }
+      }
+      &__message{
+        align-self: center;
+
+        font-size: .6rem;
+        color: color(white, x-dark);
+      }
+    }
+  }
+}

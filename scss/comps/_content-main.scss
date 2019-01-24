@@ -38,6 +38,7 @@
 
   &__charts{
     @include flex($wrap: wrap);
+    margin-top: 25px;
     &--traffic, &--dtraffic, &--mtraffic {
       canvas{
         margin-top: 15px;

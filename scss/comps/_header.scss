@@ -20,12 +20,17 @@
         width: 30px;
         padding-right: 10px;
         position: relative;
+
+        &:hover svg{
+            width: 25px;
+        }
         svg{
             position: absolute;
             width: 20px;
             top:50%;
             left:50%;
             transform: translate(-50%, -50%);
+            transition: width .5s;
         }
         @extend %pointer;
     }
