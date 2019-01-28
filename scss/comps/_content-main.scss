@@ -47,8 +47,12 @@
     }
 
     &--traffic {
-      width: auto;
+      flex-basis: auto;
       margin: 0 auto;
+
+      @include mq(tablet){
+        flex-basis: 95vw;
+      }
 
       &--header{
         @include flex;
@@ -78,12 +82,20 @@
       }
     }
     &--dtraffic {
-      width: auto;
+      flex-basis: auto;
       margin: 0 auto;
+
+      @include mq(tablet){
+        flex-basis: 49vw;
+      }
     }
     &--mtraffic {
-      width: auto;
+      flex-basis: auto;
       margin: 0 auto;
+
+      @include mq(tablet){
+        flex-basis: 49vw;
+      }
     }
   }
 }

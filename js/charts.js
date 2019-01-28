@@ -28,10 +28,17 @@ let trafficChartVar = new Chart(trafficChart, {
     }]
   },
   options: {
-    responsive: false,
+    responsive: true,
     legend: {
       display: false
     },
+    scales: {
+      yAxes: [{
+          ticks: {
+              beginAtZero:true,
+          }
+      }]
+  },
   }
 });
 

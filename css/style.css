@@ -527,8 +527,13 @@ a {
   margin-bottom: 25px;
 }
 .content__main__charts--traffic {
-  width: auto;
+  flex-basis: auto;
   margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .content__main__charts--traffic {
+    flex-basis: 95vw;
+  }
 }
 .content__main__charts--traffic--header {
   display: flex;
@@ -554,12 +559,22 @@ a {
   background: #00a8f1;
 }
 .content__main__charts--dtraffic {
-  width: auto;
+  flex-basis: auto;
   margin: 0 auto;
 }
+@media only screen and (min-width: 768px) {
+  .content__main__charts--dtraffic {
+    flex-basis: 49vw;
+  }
+}
 .content__main__charts--mtraffic {
-  width: auto;
+  flex-basis: auto;
   margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .content__main__charts--mtraffic {
+    flex-basis: 49vw;
+  }
 }
 
 .content__main__boxes {
@@ -627,7 +642,6 @@ a {
   margin-right: 15px;
   width: 30px;
   height: 30px;
-  background: url("../../images/member-1.jpg") no-repeat center center;
   background-size: cover;
   border-radius: 20px;
 }
@@ -673,7 +687,6 @@ a {
   margin-right: 15px;
   width: 30px;
   height: 30px;
-  background: url("../../images/member-1.jpg") no-repeat center center;
   background-size: cover;
   border-radius: 20px;
 }
@@ -692,7 +705,6 @@ a {
 }
 .content__main__boxes--mu--header {
   align-self: flex-start;
-  margin-bottom: 25px;
 }
 .content__main__boxes--mu--content {
   width: 80%;
@@ -700,6 +712,11 @@ a {
 }
 .content__main__boxes--mu--content input, .content__main__boxes--mu--content textarea, .content__main__boxes--mu--content button {
   display: block;
+}
+.content__main__boxes--mu--content--message {
+  padding: 13px 0;
+  margin: 10px 0;
+  text-align: center;
 }
 .content__main__boxes--mu--content input {
   background: #fbfbfb;

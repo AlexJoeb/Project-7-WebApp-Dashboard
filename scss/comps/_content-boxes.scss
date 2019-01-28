@@ -120,7 +120,6 @@
     &--header{
       @extend %box-title;
       align-self: flex-start;
-      margin-bottom: 25px;
     }
 
     &--content{
@@ -130,6 +129,13 @@
 
       width: 80%;
       height: 70%;
+
+      &--message{
+        padding: 13px 0;
+        margin: 10px 0;
+
+        text-align: center;
+      }
 
       input{
         @extend %input;

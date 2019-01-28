@@ -3,7 +3,6 @@ const $alert_close = $(".content__main__alert--close");
 const $bell = $('.header__bell');
 const $bell__path = $("#bell");
 
-
 // =====================
 // = Alert Function ====
 // =====================
@@ -105,7 +104,6 @@ const addNotification = (notif) => {
     //Message
     const message = $(`<p class="notifications__content__item__message">${notif.message}</div>`);
 
-
     wrapper.append(close);
     wrapper.append(message);
 
@@ -133,6 +131,23 @@ const getCloseParent = $target => {
     }
     else return null;
 }
+
+// =======================
+// = Form ================
+// =======================
+
+const $form = $("#msgform");
+
+$form.submit((event) => {
+    event.preventDefault();
+
+    let inputValue = $form.children()[0].value.trim();
+    let msgValue = $form.children()[1].value.trim();
+
+    if(inputValue == "") console.log("Input is empty!");
+    if(msgValue == "") console.log("Textarea is empty!");
+
+});
 
 
 $(document).on("DOMContentLoaded", () => {
