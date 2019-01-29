@@ -93,8 +93,8 @@
                                 <li id="content__main__charts--traffic--header--monthly">Monthly</li>
                             </ul>
                         </div>
-
-                        <canvas id="trafficChart"></canvas>
+                        <!--  height="50vh" width="100vw" -->
+                        <canvas height="50vh" width="80vw" id="trafficChart"></canvas>
                     </div>
                     <div class="content__main__charts--dtraffic">
                         <p class="content__main__charts--dtraffic--title">Daily Traffic</p>
@@ -246,7 +246,7 @@
                             Message Users
                         </p>
                         <div class="content__main__boxes--mu--content">
-                            <p class="content__main__boxes--mu--content--message message--success">Message goes here!</p>
+                            <p id="formalert" class="content__main__boxes--mu--content--message message--alert">Message goes here!</p>
                             <form id="msgform" class="content__main__boxes--mu--form">
                                 <input type="text" placeholder="Enter username.." id="username" />
                                 <textarea type="text" id="message"></textarea>

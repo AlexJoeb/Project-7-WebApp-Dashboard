@@ -23,8 +23,7 @@
 
     &--close{
       @include grid{
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
       }
       svg{
         @extend %pointer;
@@ -37,8 +36,13 @@
 
 
   &__charts{
-    @include flex($wrap: wrap);
+    @include flex($wrap: wrap){
+      justify-content: center;
+      align-items: center;
+    }
+
     margin-top: 25px;
+
     &--traffic, &--dtraffic, &--mtraffic {
       canvas{
         margin-top: 15px;
@@ -47,11 +51,8 @@
     }
 
     &--traffic {
-      flex-basis: auto;
-      margin: 0 auto;
-
-      @include mq(tablet){
-        flex-basis: 95vw;
+      canvas{
+        width: 90vw !important;
       }
 
       &--header{
@@ -82,19 +83,21 @@
       }
     }
     &--dtraffic {
-      flex-basis: auto;
+      flex-basis: 80vw !important;
       margin: 0 auto;
 
       @include mq(tablet){
-        flex-basis: 49vw;
+        flex-basis: 39vw !important;
+        margin: 0;
       }
     }
     &--mtraffic {
-      flex-basis: auto;
+      flex-basis: 80vw ;
       margin: 0 auto;
 
       @include mq(tablet){
-        flex-basis: 49vw;
+        flex-basis: 39vw !important;
+        margin: 0;
       }
     }
   }

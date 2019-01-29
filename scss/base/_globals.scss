@@ -51,3 +51,26 @@ a{
         transform: rotate(0deg);
     }
 }
+
+.message{
+    &--success{
+        background: color(green, x-light);
+
+        border-radius: 5px;
+
+        border-bottom: 2px solid color(green);
+        border-right: 2px solid color(green);
+        border-top: 1px solid color(green);
+        border-left: 1px solid color(green);
+    }
+    &--alert{
+        background: color(red);
+
+        border-radius: 5px;
+
+        border-bottom: 2px solid color(red, x-dark);
+        border-right: 2px solid color(red, x-dark);
+        border-top: 1px solid color(red, x-dark);
+        border-left: 1px solid color(red, x-dark);
+    }
+}

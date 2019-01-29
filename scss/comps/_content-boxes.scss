@@ -135,6 +135,9 @@
         margin: 10px 0;
 
         text-align: center;
+
+        color: color(white) !important;
+        font-family: $font__stack--primary;
       }
 
       input{
@@ -142,6 +145,8 @@
         background: color(white, x-light);
         width: 100%;
         border-radius: 5px;
+
+        margin-top: 10px;
 
         &::placeholder{
           color:color(gray, x-light);

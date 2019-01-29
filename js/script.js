@@ -137,15 +137,21 @@ const getCloseParent = $target => {
 // =======================
 
 const $form = $("#msgform");
+const $formalert = $("#formalert");
 
 $form.submit((event) => {
     event.preventDefault();
-
+    
     let inputValue = $form.children()[0].value.trim();
     let msgValue = $form.children()[1].value.trim();
 
     if(inputValue == "") console.log("Input is empty!");
     if(msgValue == "") console.log("Textarea is empty!");
+
+    $formalert.text("Woops! You have blank fields.");
+    $formalert.slideToggle(400, () => {
+        setTimeout(function(){ $formalert.slideToggle(); }, 2000);
+    });
 
 });
 
@@ -158,6 +164,7 @@ $(document).on("DOMContentLoaded", () => {
     }
 
     $notif__screen.hide();
+    $formalert.hide();
 
     for(x in notification){
         addNotification(notification[x]);

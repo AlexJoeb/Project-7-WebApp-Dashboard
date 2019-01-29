@@ -69,7 +69,7 @@ let dailyTrafficVar = new Chart(dailyTraffic, {
     }]
   },
   options: {
-    responsive: false,
+    responsive: true,
     legend: {
       display: false,
 
@@ -109,7 +109,7 @@ let mobileChartVar = new Chart(mobileChart, {
     }]
   },
   options: {
-    responsive: false,
+    responsive: true,
     legend: {
       display: false,
     },

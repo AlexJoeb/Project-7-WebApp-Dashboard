@@ -300,6 +300,23 @@ a {
     transform: rotate(0deg);
   }
 }
+.message--success {
+  background: #008d00;
+  border-radius: 5px;
+  border-bottom: 2px solid #007300;
+  border-right: 2px solid #007300;
+  border-top: 1px solid #007300;
+  border-left: 1px solid #007300;
+}
+.message--alert {
+  background: #EA1744;
+  border-radius: 5px;
+  border-bottom: 2px solid #d4133c;
+  border-right: 2px solid #d4133c;
+  border-top: 1px solid #d4133c;
+  border-left: 1px solid #d4133c;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -507,8 +524,7 @@ a {
   display: grid;
   grid-template: 1fr / 1fr;
   grid-template-areas: none;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 .content__main__alert--close svg {
   width: 9px;
@@ -521,19 +537,15 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .content__main__charts--traffic canvas, .content__main__charts--dtraffic canvas, .content__main__charts--mtraffic canvas {
   margin-top: 15px;
   margin-bottom: 25px;
 }
-.content__main__charts--traffic {
-  flex-basis: auto;
-  margin: 0 auto;
-}
-@media only screen and (min-width: 768px) {
-  .content__main__charts--traffic {
-    flex-basis: 95vw;
-  }
+.content__main__charts--traffic canvas {
+  width: 90vw !important;
 }
 .content__main__charts--traffic--header {
   display: flex;
@@ -559,21 +571,23 @@ a {
   background: #00a8f1;
 }
 .content__main__charts--dtraffic {
-  flex-basis: auto;
+  flex-basis: 80vw !important;
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
   .content__main__charts--dtraffic {
-    flex-basis: 49vw;
+    flex-basis: 39vw !important;
+    margin: 0;
   }
 }
 .content__main__charts--mtraffic {
-  flex-basis: auto;
+  flex-basis: 80vw;
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
   .content__main__charts--mtraffic {
-    flex-basis: 49vw;
+    flex-basis: 39vw !important;
+    margin: 0;
   }
 }
 
@@ -717,11 +731,14 @@ a {
   padding: 13px 0;
   margin: 10px 0;
   text-align: center;
+  color: #eee !important;
+  font-family: "Roboto", sans-serif;
 }
 .content__main__boxes--mu--content input {
   background: #fbfbfb;
   width: 100%;
   border-radius: 5px;
+  margin-top: 10px;
 }
 .content__main__boxes--mu--content input::placeholder {
   color: #737373;
