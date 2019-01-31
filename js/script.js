@@ -145,13 +145,31 @@ $form.submit((event) => {
     let inputValue = $form.children()[0].value.trim();
     let msgValue = $form.children()[1].value.trim();
 
-    if(inputValue == "") console.log("Input is empty!");
-    if(msgValue == "") console.log("Textarea is empty!");
-
-    $formalert.text("Woops! You have blank fields.");
-    $formalert.slideToggle(400, () => {
-        setTimeout(function(){ $formalert.slideToggle(); }, 2000);
-    });
+    let errormsg = "Woops! ";
+    let successmsg = "Yay! ";
+    if(inputValue == "") {
+        $formalert.removeClass("message--success");
+        $formalert.addClass("message--alert");
+        $formalert.text(errormsg + "Enter a username!");
+        $formalert.slideToggle(400, () => {
+            setTimeout(function(){ $formalert.slideToggle(); }, 2000);
+        });
+    }
+    else if(msgValue == "") {
+        $formalert.removeClass("message--success");
+        $formalert.addClass("message--alert");
+        $formalert.text(errormsg + "Enter a message!");
+        $formalert.slideToggle(400, () => {
+            setTimeout(function(){ $formalert.slideToggle(); }, 2000);
+        });
+    }else{
+        $formalert.removeClass("message--alert");
+        $formalert.addClass("message--success");
+        $formalert.text(successmsg + "Message sent!");
+        $formalert.slideToggle(400, () => {
+            setTimeout(function(){ $formalert.slideToggle(); }, 5000);
+        });
+    }
 
 });
 
